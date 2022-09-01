@@ -1,31 +1,20 @@
 package tdd.fizzbuzz;
 
 public class FizzBuzz {
-    String FIZZ = "Fizz";
-    String BUZZ = "Buzz";
-    String WHIZZ = "Whizz";
     public  String countOff(int order){
+        StringBuilder message = new StringBuilder();
         if (order % 3 == 0){
-            if(order % 5 == 0){
-                if(order % 7 == 0){
-                    return FIZZ+BUZZ+WHIZZ;
-                }
-                return FIZZ+BUZZ;
-            }
-            if(order % 7 == 0){
-                return FIZZ+WHIZZ;
-            }
-            return FIZZ;
+            message.append("Fizz");
         }
         if (order % 5 == 0){
-            if(order % 7 == 0){
-                return BUZZ+WHIZZ;
-            }
-            return BUZZ;
+            message.append("Buzz");
         }
         if (order % 7 == 0){
-            return WHIZZ;
+            message.append("Whizz");
         }
-        return String.valueOf(order);
+        if (message.length() == 0){
+            message.append(order);
+        }
+        return message.toString();
     }
 }
