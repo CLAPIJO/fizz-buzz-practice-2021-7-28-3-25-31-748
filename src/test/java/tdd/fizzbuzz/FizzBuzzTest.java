@@ -81,4 +81,15 @@ public class FizzBuzzTest {
         //then
         assertEquals(expected, actual);
     }
+
+    @Test
+    void should_return_FizzBuzz_when_count_off_given_number_105() {
+        //given
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        String expected = "FizzBuzzWhizz";
+        //when
+        String actual = fizzBuzz.countOff(105);
+        //then
+        assertEquals(expected, actual);
+    }
 }
